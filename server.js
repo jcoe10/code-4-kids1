@@ -1,10 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 // const mongoose = require("mongoose");
-// const routes = require("./routes");
+const routes = require("./routes");
 const app = express();
-const path = require("path");
-
+const router = require("express").Router();
 
 const PORT = process.env.PORT || 3005;
 
@@ -12,9 +11,12 @@ const PORT = process.env.PORT || 3005;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // Serve up static assets
-app.use(express.static("client/public"));
+app.use(express.static("public"));
 // Add routes, both API and view
 
+router.use(function(req, res) {
+  res.sendFile(path.join(__dirname, "client/public/index.html"));
+});
 
 // app.use(routes);
 
@@ -28,8 +30,8 @@ app.use(express.static("client/public"));
 //   }
 // );
 
-app.get("/", function(req, res){ 
-  res.sendFile(path.join(__dirname, "client/public/index.html"))
+app.get("/", function(res, req){ 
+  res.sendFile(path.join(__dirname, "public/index.html"))
 })
 
 // Start the API server
