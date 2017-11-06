@@ -19,8 +19,8 @@ class Kids extends Component {
                     <div>
                         <center>
 
-                                <a href="../../index1.html" type="button" class="btn btn-success">YES</a>
-                                <a href="../../home.html" type="button" class="btn btn-danger">NO</a>
+                                <a href="../.././login.html" type="button" class="btn btn-success">YES</a>
+                                <a href="../.././index.html" type="button" class="btn btn-danger">NO</a>
 
 
                         </center>
