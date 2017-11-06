@@ -30,9 +30,9 @@ router.use(function(req, res) {
 //   }
 // );
 
-app.get("/", function(res, req){ 
-  res.sendFile(path.join(__dirname, "public/index.html"))
-})
+// app.get("/", function(res, req){ 
+//   res.sendFile(path.join(__dirname, "public/index.html"))
+// })
 
 // Start the API server
 app.listen(PORT, function() {
