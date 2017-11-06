@@ -70,7 +70,7 @@ $(document).ready(function() {
     }
     
     function wait() {
-        if (questionCounter < 7) {
+        if (questionCounter < 3) {
         questionCounter++;
         generateHTML();
         counter = 30;
@@ -113,10 +113,54 @@ $(document).ready(function() {
     var startScreen;
     var gameHTML;
     var counter = 30;
-    var questionArray = ["What is the capital of Australia?", "What is the capital of Liberia?", "What is the capital of Taiwan?", "What is the capital of Japan?", "What is the capital of China?", "What is the capital of Turkey?", "What is the capital of Colombia?", "What is the capital of India?"];
-    var answerArray = [["Canberra", "Melbourne", "Sydney", "Darwin"], ["Arthington","Monrovia","Tuzon","Marshall"], ["Tainan City", "Taichung", "Taipei", "Hsinchu"], ["Kyoto","Hiroshima","Tokyo","Osaka"], ["Hong Kong", "Macau", "Shanghai", "Beijing"], ["Ankara","Istanbul","Antalya","Bursa"], ["Medellin", "Bogota", "Cartagena", "Cali"], ["Mumbai","Hyderabad","Bangalore","New Delhi"]];
-    var imageArray = ["<img class='center-block img-right' src='img/australia.png'>", "<img class='center-block img-right' src='img/liberia.png'>", "<img class='center-block img-right' src='img/taiwan.png'>", "<img class='center-block img-right' src='img/japan.png'>", "<img class='center-block img-right' src='img/china.png'>", "<img class='center-block img-right' src='img/turkey.png'>", "<img class='center-block img-right' src='img/colombia.png'>", "<img class='center-block img-right' src='img/india.png'>"];
-    var correctAnswers = ["A. Canberra", "B. Monrovia", "C. Taipei", "C. Tokyo", "D. Beijing", "A. Ankara", "B. Bogota", "D. New Delhi"];
+    var questionArray = 
+    [
+        "What does the coding language HTML stand for?", 
+        "What is the highest level of a header tag?", 
+        "What part do you see on the page?", 
+        "What is the current version of HTML?"
+        // "What is the capital of China?", 
+        // "What is the capital of Turkey?", 
+        // "What is the capital of Colombia?", 
+        // "What is the capital of India?"
+    ];
+    
+    var answerArray = 
+    [
+        ["Holding Text Modal Language", "Holding Text Marker Language", "Hyperlink Text Management Language", "Hyper Text Markup Language"], 
+        ["h3","h1","div","center"], 
+        ["footer", "head", "body", "title"], 
+        ["HTML5", "HTML2017", "HTMLv5.1", "HTMLC"]
+        // ["Hong Kong", "Macau", "Shanghai", "Beijing"], 
+        // ["Ankara","Istanbul","Antalya","Bursa"], 
+        // ["Medellin", "Bogota", "Cartagena", "Cali"], 
+        // ["Mumbai","Hyderabad","Bangalore","New Delhi"]
+    ];
+    
+    var imageArray = 
+    [
+        "<img class='center-block img-right' src='css/question1html.png'>", 
+        "<img class='center-block img-right' src='css/question2html.png'>", 
+        "<img class='center-block img-right' src='css/question3html.png'>", 
+        "<img class='center-block img-right' src='css/question4html.png'>"
+        // "<img class='center-block img-right' src='img/china.png'>", 
+        // "<img class='center-block img-right' src='img/turkey.png'>", 
+        // "<img class='center-block img-right' src='img/colombia.png'>", 
+        // "<img class='center-block img-right' src='img/india.png'>"
+    ];
+    
+    var correctAnswers = 
+    [
+        "D. Hyper Text Markup Language", 
+        "B. h1", 
+        "C. body", 
+        "A. HTML5"
+        // "D. Beijing", 
+        // "A. Ankara", 
+        // "B. Bogota", 
+        // "D. New Delhi"
+    ];
+
     var questionCounter = 0;
     var selecterAnswer;
     var theClock;

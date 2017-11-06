@@ -51,7 +51,11 @@
   }
   
   body {
-    background-color: #DD0506;
-    color: white;
+    color: blue;
+    background-image: url("back.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+
   }
   
