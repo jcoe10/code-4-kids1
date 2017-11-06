@@ -16,11 +16,11 @@ class Nav extends Component {
                 <a className="nav-link" href="index.html">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="projects.html">Game</a>
+                <a className="nav-link" href="game.html">Game</a>
               </li>
               <li>
-              <a href="login.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Log In</a>
-                <a href="signup.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sign Up</a>  
+              <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">Log in</a>
+              <a type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal2">Sign up</a>  
             </li>
             </ul>
           </div>

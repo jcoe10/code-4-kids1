@@ -11,7 +11,24 @@ class Kids extends Component {
     render() {
       return (
          <Jumbotron>
-            <h1>What code language would you like to learn today?</h1>
+             <center>
+                <h1 class="display-3">Hey!</h1>
+                <h2>Would you like to learn something awesome?</h2>
+                <hr class="my-4" />
+                <p class="lead">
+                    <div>
+                        <center>
+
+                                <a href="../../index1.html" type="button" class="btn btn-success">YES</a>
+                                <a href="../../home.html" type="button" class="btn btn-danger">NO</a>
+
+
+                        </center>
+                    </div>
+                </p>
+        
+        </center>
+
          </Jumbotron>
       );
     }

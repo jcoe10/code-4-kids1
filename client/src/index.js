@@ -6,3 +6,5 @@ import App from './App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 // registerServiceWorker();
+
+// , <App1 />, <App2 />, <App3 />, <HTML />, <CSS />, <JavaScript />
