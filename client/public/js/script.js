@@ -24,13 +24,13 @@ $(document).ready(function() {
         clickSound.play();
         selectedAnswer = $(this).text();
         if(selectedAnswer === correctAnswers[question]) {
-            alert("correct");
+            // alert("correct");
     
             clearInterval(theClock);
             generateWin();
         }
         else {
-            alert("wrong answer!");
+            // alert("wrong answer!");
             clearInterval(theClock);
             generateLoss();
         }
@@ -151,4 +151,4 @@ $(document).ready(function() {
     var correct = 0;
     var incorrect = 0;
     var unanswered = 0;
-    var clickSound = new Audio("sound/button-click.mp3");
+    var clickSound = new Audio("./sound/Jeopardy-theme-song.mp3");
