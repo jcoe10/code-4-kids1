@@ -14,13 +14,14 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 // Add routes, both API and view
 
-router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "client/public/index.html"));
-});
+// router.use(function(req, res) {
+//   res.sendFile(path.join(__dirname, "client/public/index.html"));
+// });
 
-// router.get("/", function(req, res){
-//   res.status(200).send("Hi");
-// })
+router.get("/", function(req, res){
+   res.sendFile(path.join(__dirname, "client/public/index.html"));
+})
+
 // app.use(routes);
 
 // // Set up promises with mongoose
