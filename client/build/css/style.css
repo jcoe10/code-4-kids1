@@ -1,0 +1,10 @@
+body{
+    background-image: url("back.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#greet{
+    color: limegreen;
+}
