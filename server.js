@@ -19,7 +19,7 @@ app.use(express.static("client/build"));
 // });
 
 router.get("/", function(req, res){
-   res.sendFile(path.join(__dirname, "client/build/index.html"));
+   res.sendFile(path.join(__dirname, "index.html"));
 })
 
 // app.use(routes);
