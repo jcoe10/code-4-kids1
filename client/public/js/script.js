@@ -12,7 +12,7 @@ $(document).ready(function() {
     
     $("body").on("click", ".start-button", function(event){
         event.preventDefault();
-        clickSound.play();
+        sound.play();
         genHTML();
     
         wrapper();
@@ -21,7 +21,7 @@ $(document).ready(function() {
     
     $("body").on("click", ".answer", function(event){
        
-        clickSound.play();
+        sound.play();
         selectedAnswer = $(this).text();
         if(selectedAnswer === correctAnswers[question]) {
             // alert("correct");
@@ -37,7 +37,7 @@ $(document).ready(function() {
     });
     
     $("body").on("click", ".reset-button", function(event){
-        clickSound.play();
+        sound.play();
         reset();
     });
     
@@ -151,4 +151,4 @@ $(document).ready(function() {
     var correct = 0;
     var incorrect = 0;
     var unanswered = 0;
-    var clickSound = new Audio("./sound/Jeopardy-theme-song.mp3");
+    var sound = new Audio("./sound/Jeopardy-theme-song.mp3");
