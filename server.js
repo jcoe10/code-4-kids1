@@ -19,9 +19,9 @@ app.use(bodyParser.json());
 //   res.sendFile(path.join(__dirname, "client/public/index.html"));
 // });
 
-app.use(express.static(path.resolve(__dirname, 'client/build')));
+router.use(express.static(path.resolve(__dirname, 'client/build')));
 
-app.get('*', function(request, response) {
+router.get('*', function(request, response) {
   response.sendFile(path.resolve(__dirname, 'client/build', 'index.html'));
 });
 
