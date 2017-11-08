@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3005;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // Serve up static assets
-// app.use(express.static("client/build"));
+app.use(express.static("client/build"));
 // Add routes, both API and view
 
 // router.use(function(req, res) {
@@ -20,13 +20,21 @@ app.use(bodyParser.json());
 // });
 
 
+app.get("*", function(req, res) {
+  if ( process.env.NODE_ENV === 'production' ) {
+    res.sendFile(__dirname + "/client/build/index.html");
+  } else {
+    res.sendFile(__dirname + "/client/public/index.html");
+  }
+});
+
 
 
 // router.use(express.static(path.resolve(__dirname, 'client/build')));
 
-router.get('*', function(request, response) {
-  response.sendFile(path.resolve(__dirname, 'client/build', 'index.html'));
-});
+// router.get('*', function(request, response) {
+//   response.sendFile(path.resolve(__dirname, 'client/build', 'index.html'));
+// });
 
 
 
