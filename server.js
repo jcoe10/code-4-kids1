@@ -11,16 +11,26 @@ const PORT = process.env.PORT || 3005;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // Serve up static assets
-app.use(express.static("client/build"));
+// app.use(express.static("client/build"));
 // Add routes, both API and view
 
 // router.use(function(req, res) {
 //   res.sendFile(path.join(__dirname, "client/public/index.html"));
 // });
 
-router.get("/", function(req, res){
-   res.sendFile(path.join(__dirname, "index.html"));
-})
+app.use(express.static(path.resolve(__dirname, 'client/build')));
+
+app.get('*', function(request, response) {
+  response.sendFile(path.resolve(__dirname, 'client/build', 'index.html'));
+});
+
+
+
+
+
+// router.get("/", function(req, res){
+//    res.sendFile(path.join(__dirname, "index.html"));
+// })
 
 // app.use(routes);
 
