@@ -68,7 +68,7 @@ class App extends Component {
 <div className="container">
 <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div className="container">
-          <a className="navbar-brand" href="slides.html">Code 4 Kids</a>
+          <a className="navbar-brand" href="c:\Users\cobal\Desktop\Coding-Boot-Camp\Repos\code-4-kids1\client\build\slides.html">Code 4 Kids</a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
             aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
